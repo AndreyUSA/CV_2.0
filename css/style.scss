@@ -1,0 +1,280 @@
+$primary_color: #c4eff2;
+$secondary_color: black;
+$third_color:#0b3953;
+
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: $primary_color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1100px;
+    background-color: white;
+    display: grid;
+    margin: 50px;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 5px 25px #0b3953;
+}
+
+
+.profile{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    color: white;
+    border-bottom: 1px solid $primary_color;
+}
+
+.profile .photo{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile .photo img{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.profile h2{
+    color: $primary_color;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.3;
+}
+.profile h2 span{
+    font-weight: 300;
+    font-size: 0.8em;
+  
+}
+
+
+.ContactInfo{
+    padding-top: 40px;
+}
+
+.title{
+    color: $primary_color;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.ContactInfo ul{
+    position: relative;
+}
+.ContactInfo ul li{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.ContactInfo ul li .icon{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: $primary_color;
+}
+.ContactInfo ul li span{
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.ContactInfo ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+.ContactInfo.Education li{
+    margin-bottom: 10px;
+}
+.ContactInfo.Education h4{
+    font-weight: 300;
+    color:white;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.ContactInfo.Education h5{
+    font-weight: 300;
+    color:$primary_color;
+}
+
+.ContactInfo.Language .percent{
+    position: relative;
+    width: 100%;
+    height:10px;
+    background-color: black;
+    display: block;
+    margin-top: 2px;
+    border-radius: 20px;
+
+}
+
+.ContactInfo.Language .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: $primary_color;
+    border-radius: 20px;
+}
+
+.skils{
+    margin-top: 10px;
+}
+.skils ul{
+    margin-left: 20px;
+}
+.skils li{
+    margin-bottom: 6px;
+    color: $third_color;
+}
+.title2{
+    color: $third_color;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+p{
+    color: $third_color;
+}
+.skils .box{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+
+.skils .box .year_company{
+    min-width: 150px;
+}
+
+.skils .box .year_company h5{
+    text-transform: uppercase;
+    color: #8f9294;
+    font-weight: 600;
+}
+
+
+.skils .box .text h4{
+    color: #0c6ea7;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+
+.skil_bar .box{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.skil_bar .box h4{
+    color: #8f9294;
+    font-weight: 400px;
+    text-transform: uppercase;
+}
+.skil_bar .box .percent{
+    position: relative;
+    width: 100%;
+    height: 15px;
+    background-color: #c4eff2;
+    border-radius: 20px;
+}
+
+.skil_bar .box .percent div{
+    border-radius: 20px;
+    position:absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #0b3953;    
+}
+
+
+.interest{
+    margin-top: 15px;
+}
+
+
+.interest ul{
+    display: grid;
+    grid-template-columns: repeat(4,1fr); 
+}
+
+.interest ul li{
+    list-style: none;
+    color: #0b3953;
+    margin: 10px 0;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.interest ul li .fa{
+    margin-right: 5px;
+    color:#0c6ea7;
+    font-size: 18px;
+    width: 20px;
+}
+.container .left__bar{
+    position: relative;
+    background-color: white;
+    padding: 40px;
+}
+
+.container .rigth_bar{
+    position: relative;
+    background-color:#0b3953;
+    padding: 40px;
+}
+
+@media (max-width: 1000px){
+    .container{
+        margin: 10px;
+        grid-template-columns: revert;
+    }
+    .interest ul{
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+   
+}
+
+@media (max-width: 600px){
+     .skils .box{
+        flex-direction: column;
+        margin-bottom: 5px;
+     }
+     .skils .box .year_company{
+         margin-bottom:5px;
+        
+     }
+     
+
+}
